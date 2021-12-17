@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="./assets/highlight/styles/monokai-sublime.min.css"> -->
+    <title>AluraDev | Home</title>
+</head>
+<body>
+
+    <header>
+        <nav class="header">
+            <div class="header__logo">
+                <a href="./index.html" class="header__logo--link">
+                    <img src="./assets/img/logo.png" alt="" class="header__logo--img">
+                </a>
+            </div>
+            <div class="header__navigation">
+                <div class="header__search">
+                    <input type="search" name="" id="" class="header__search--input" placeholder="Busque por algo">
+                    <img src="./assets/img/icon/icon-search.svg" alt="Icone de busca" class="header__search--icon">
+                </div>
+                <div class="header__menu">
+                    <img src="./assets/img/icon/icon-burguer.svg" alt="Icone do menu" class="header__menu--icon">
+                    <div class="header__menu--profile">
+                        <a href="#" class="header__menu--profile-link">
+                            <img src="./assets/img/user-lucas.jpg" alt="Foto de perfil do usuário" class="header__menu--profile-image">
+                            <p class="header__menu--profile-username">Lucas Palhano</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+
+        <aside class="menu">
+            <nav class="menu__navigation">
+                <h2 class="menu__title">Menu</h2>
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a href="./index.html" class="menu__item-link">
+                            <div class="menu__item-icon menu__item-icon--code"></div>
+                            <p class="menu__item--text">Editor de código</p>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="./comunidade.html" class="menu__item-link">
+                            <div class="menu__item-icon menu__item-icon--community"></div>
+                            <p class="menu__item--text">Comunidade</p>
+                        </a>
+                    </li>
+                </ul>
+                <hr class="menu__division">
+                <div class="menu__profile">
+                    <a href="#" class="menu__profile-link">
+                        <img src="./assets/img/user-lucas.jpg" alt="Foto de perfil do usuário" class="menu__profile-image">
+                        <p class="menu__profile-username">Lucas Palhano</p>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <section class="code-editor">
+            <form action="" class="code-editor__form">
+                <div class="code-editor__container">
+                    <div class="code-editor__console">
+                        <div class="code-editor__console--header"></div>
+                        <textarea class="code-editor__input" placeholder="Digite seu código aqui..."></textarea>
+                        <!-- <pre class="code-editor__hightlight" style="display: none;">
+                            <code class="code-editor__hightlight-code"></code>
+                        </pre> -->
+                    </div>
+                </div>
+                <button class="code-editor__submit">Visualizar com o highlight</button>
+            </form>
+        </section>
+
+        <section class="project-form">
+            <form action="" class="project-form__form">
+                <div class="project-form__info">
+                    <h2 class="project-form__info--title">Seu projeto</h2>
+                    <input type="text" class="project-form__info--name" placeholder="Nome do seu projeto">
+                    <textarea class="project-form__info--description" placeholder="Descrição do seu projeto"></textarea>
+                </div>
+                <div class="project-form__style">
+                    <h2 class="project-form__style--title">Personalização</h2>
+                    <div class="project-form__style--settings">
+                        <select name="language" id="language" class="project-form__style--type">
+                            <optgroup label="Programação" class="project-form__style--type-group">
+                                <option value="Javascript" class="project-form__style--type-option">Javascript</option>
+                                <option value="Python" class="project-form__style--type-option">Python</option>
+                                <option value="PHP" class="project-form__style--type-option">PHP</option>
+                                <option value="Dart" class="project-form__style--type-option">Dart</option>
+                            </optgroup>
+                            <optgroup label="Marcação" class="project-form__style--type-group">
+                                <option value="HTML" class="project-form__style--type-option">HTML</option>
+                            </optgroup>
+                            <optgroup label="Estilização" class="project-form__style--type-group">
+                                <option value="CSS" class="project-form__style--type-option">CSS</option>
+                            </optgroup>
+                        </select>
+                        <div class="project-form__style--color-border">
+                            <input type="color" name="" id="" class="project-form__style--color" value="#6BD1FF">
+                        </div>
+                    </div>
+                </div>
+                <button class="project-form__submit">Salvar projeto</button>
+            </form>
+        </section>
+
+    </main>
+
+    <script src="./assets/js/menu.js"></script>
+    <!-- <script src="./assets/highlight/highlight.min.js"></script> -->
+    <script>
+
+        // hljs.highlightAll();
+
+        var isHightlight = false;
+        document.querySelector('.code-editor__submit').addEventListener('click', function(event) {
+            event.preventDefault();
+            // if (!isHightlight) {
+            //      document.querySelector('.code-editor__input').style.display = "none";
+            //      document.querySelector('.code-editor__hightlight').style.display = "block";
+            //      document.querySelector('.code-editor__hightlight-code').textContent = document.querySelector('.code-editor__input').value;
+            //      isHightlight = !isHightlight;
+            // } else {
+            //      document.querySelector('.code-editor__input').style.display = "block";
+            //      document.querySelector('.code-editor__hightlight').style.display = "none";
+            //      document.querySelector('.code-editor__hightlight-code').textContent = document.querySelector('.code-editor__input').value;
+            //      isHightlight = !isHightlight;
+            // }
+        })
+
+        document.querySelector('.project-form__style--color').addEventListener('input', function() {
+            document.querySelector('.code-editor__container').style.backgroundColor = document.querySelector('.project-form__style--color').value;
+        })
+
+        document.querySelector('.project-form__submit').addEventListener('click', function(event) {
+            event.preventDefault();
+        })
+    </script>
+
+</body>
+</html>

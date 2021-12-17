@@ -1,0 +1,101 @@
+.menu {
+    position: fixed;
+    top: 7rem;
+    right: -70vw;
+    background-color: $gray;
+    border-radius: 8px 8px 0 0;
+    width: 70vw;
+    height: calc(100vh - 7rem);
+    padding: .5rem 1.5rem;
+    box-sizing: border-box;
+    transition: .6s;
+
+    @include tablet {
+        width: 40vw;
+    }
+
+    @include desktop {
+        width: 15vw;
+        box-sizing: border-box;
+        display: block;
+        background-color: transparent;
+        position: static;
+        padding: 0;
+    }
+
+    &__title {
+        display: none;
+        
+        @include desktop {
+            display: block;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: .4rem;
+            font-weight: 400;
+            margin-top: 0;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+    }
+
+    &__item-link {
+        text-decoration: none;
+        color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: .5rem;
+    }
+
+    &__item-icon {
+        width: 2.2rem;
+        height: 2.2rem;
+        border-radius: $border-radius;
+        margin-right: 1rem;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        &--code {
+            background-image: url('../img/icon/icon-code.svg');
+            background-color: $button;
+        }
+
+        &--community {
+            background-image: url('../img/icon/icon-community.svg');
+            background-color: rgba(80, 129, 251, 0.16);;
+        }
+    }
+
+    &__division {
+
+        @include desktop {
+            display: none;
+        }
+    }
+
+    &__profile {
+
+        @include desktop {
+            display: none;
+        }
+
+        &-link {
+            text-decoration: none;
+            color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: 1rem;
+        }
+
+        &-image {
+            width: 2.2rem;
+            height: 2.2rem;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+    }
+}

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Mono&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./assets/highlight/styles/monokai-sublime.min.css">
+    <link rel="stylesheet" href="./assets/css/comunidade.css">
+    <title>AluraDev | Home</title>
+</head>
+<body>
+
+    <header>
+        <nav class="header">
+            <div class="header__logo">
+                <a href="./index.html" class="header__logo--link">
+                    <img src="./assets/img/logo.png" alt="" class="header__logo--img">
+                </a>
+            </div>
+            <div class="header__navigation">
+                <div class="header__search">
+                    <input type="search" name="" id="" class="header__search--input" placeholder="Busque por algo">
+                    <img src="./assets/img/icon/icon-search.svg" alt="Icone de busca" class="header__search--icon">
+                </div>
+                <div class="header__menu">
+                    <img src="./assets/img/icon/icon-burguer.svg" alt="Icone do menu" class="header__menu--icon">
+                    <div class="header__menu--profile">
+                        <a href="#" class="header__menu--profile-link">
+                            <img src="./assets/img/user-lucas.jpg" alt="Foto de perfil do usuário" class="header__menu--profile-image">
+                            <p class="header__menu--profile-username">Lucas Palhano</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+
+        <aside class="menu">
+            <nav class="menu__navigation">
+                <h2 class="menu__title">Menu</h2>
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a href="./index.html" class="menu__item-link">
+                            <div class="menu__item-icon menu__item-icon--code"></div>
+                            <p class="menu__item--text">Editor de código</p>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="./comunidade.html" class="menu__item-link">
+                            <div class="menu__item-icon menu__item-icon--community"></div>
+                            <p class="menu__item--text">Comunidade</p>
+                        </a>
+                    </li>
+                </ul>
+                <hr class="menu__division">
+                <div class="menu__profile">
+                    <a href="#" class="menu__profile-link">
+                        <img src="./assets/img/user-lucas.jpg" alt="Foto de perfil do usuário" class="menu__profile-image">
+                        <p class="menu__profile-username">Lucas Palhano</p>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <section class="projects">
+
+            <h2 class="projects__filter">Remover filtro de "<span class="projects__filter-language"></span>"</h2>
+            <h2 class="projects__search">Remover busca por "<span class="projects__search-str"></span>"</h2>
+
+            <ul class="projects__list">
+
+                <li class="projects__card card">
+                    <div class="card__container card__container--one">
+                        <div class="card__console">
+                            <div class="card__console-header"></div>
+                            <pre class="card__code">
+                                <code class="card__code-hightlight">
+var likeButton = document.querySelectorAll('.card__likes-icon');
+
+likeButton.forEach(like => {
+    like.addEventListener('click', function(){
+        console.log(this.src);
+        if (this.src == "file:///C:/Users/Computador/Desktop/alura-challenge-front-end/app/src/assets/img/icon/icon-heart.svg") {
+            this.src = "./assets/img/icon/icon-heart_active.svg";
+            var numLikes = parseInt(this.parentElement.childNodes[3].textContent);
+            numLikes++;
+            this.parentElement.childNodes[3].textContent = numLikes;
+        } else {
+            this.src = "./assets/img/icon/icon-heart.svg";
+            var numLikes = parseInt(this.parentElement.childNodes[3].textContent);
+            numLikes--;
+            this.parentElement.childNodes[3].textContent = numLikes;
+        }
+    })
+});
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                    <div class="card__info">
+                        <h2 class="card__info-title">Sistema de like</h2>
+                        <p class="card__info-description">Função usada para controlar o sistema de like nos códigos.</p>
+                        <span class="card__info-tag card__info-tag--javascript">Javascript</span>
+                        <div class="card__info-interactions">
+                            <div class="card__interaction-container">
+                                <div class="card__comments">
+                                    <img src="./assets/img/icon/icon-comment.svg" alt="" class="card__comments-icon">
+                                    <span class="card__comments-num">0</span>
+                                </div>
+                                <div class="card__likes">
+                                    <img src="./assets/img/icon/icon-heart.svg" alt="" class="card__likes-icon">
+                                    <span class="card__likes-num">0</span>
+                                </div>
+                            </div>
+                            <div class="card__profile">
+                                <img src="./assets/img/user-lucas.jpg" alt="" class="card__profile-image">
+                                <p class="card__profile-username">@palhano_o</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="projects__card card">
+                    <div class="card__container card__container--two">
+                            <div class="card__console">
+                            <div class="card__console-header"></div>
+                            <pre class="card__code">
+                                <code class="card__code-hightlight">
+// CORES
+$background: #051D3B;
+$editor-background: #6BD1FF;
+$black: #000;
+$white: #FFF;
+$button: #5081FB;
+$dark-gray: #292936;
+$mac-red: #FF5F56;
+$mac-yellow: #FFBD2E;
+$mac-green: #27C93F;
+$gray: #2D415B;
+    
+// COMPONENTES
+$border-radius: 8px;
+$container-padding: 1.5rem 1rem;
+    
+// RESPONSIVIDADE
+$mobile: 375px;
+$tablet: 768px;
+$desktop: 1440px;
+    
+@mixin tablet {
+    @media (min-width: $tablet) {
+        @content;
+    }
+}
+    
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                    <div class="card__info">
+                        <h2 class="card__info-title">Variáveis e mixins</h2>
+                        <p class="card__info-description">Estes são os parâmetros em SASS usados como base para a execução deste projeto.</p>
+                        <span class="card__info-tag card__info-tag--sass">SASS</span>
+                        <div class="card__info-interactions">
+                            <div class="card__interaction-container">
+                                <div class="card__comments">
+                                    <img src="./assets/img/icon/icon-comment.svg" alt="" class="card__comments-icon">
+                                    <span class="card__comments-num">0</span>
+                                </div>
+                                <div class="card__likes">
+                                    <img src="./assets/img/icon/icon-heart.svg" alt="" class="card__likes-icon">
+                                    <span class="card__likes-num">0</span>
+                                </div>
+                            </div>
+                            <div class="card__profile">
+                                <img src="./assets/img/user-lucas.jpg" alt="" class="card__profile-image">
+                                <p class="card__profile-username">@palhano_o</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="projects__card card">
+                    <div class="card__container card__container--three">
+                            <div class="card__console">
+                            <div class="card__console-header"></div>
+                            <pre name="" id="" class="card__code">
+                                <code class="card__code-hightlight">
+#Easy game in python
+
+import random
+import time
+
+Passwordlist = ['abc123', '1234', '123456', 'QWERT', 'ASFDJKL;', '0102', '0', '100', '1000', '10000', '123', '2048', '1024', 'JSON', '1234567890']
+
+ans = input('Enter an account name: ')
+time.sleep(1)
+
+print('Finding the password for it...')
+time.sleep(1)
+print(random.choice(Passwordlist)+ ' is the password')
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                    <div class="card__info">
+                        <h2 class="card__info-title">Exemplo de Python</h2>
+                        <p class="card__info-description">Eu nunca estudei Python, então precisei pegar um exemplo na internet.</p>
+                        <span class="card__info-tag card__info-tag--python">Python</span>
+                        <div class="card__info-interactions">
+                            <div class="card__interaction-container">
+                                <div class="card__comments">
+                                    <img src="./assets/img/icon/icon-comment.svg" alt="" class="card__comments-icon">
+                                    <span class="card__comments-num">0</span>
+                                </div>
+                                <div class="card__likes">
+                                    <img src="./assets/img/icon/icon-heart.svg" alt="" class="card__likes-icon">
+                                    <span class="card__likes-num">0</span>
+                                </div>
+                            </div>
+                            <div class="card__profile">
+                                <img src="./assets/img/user-lucas.jpg" alt="" class="card__profile-image">
+                                <p class="card__profile-username">@palhano_o</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="projects__card card">
+                    <div class="card__container card__container--four">
+                            <div class="card__console">
+                            <div class="card__console-header"></div>
+                            <pre class="card__code">
+                                <code class="card__code-hightlight">
+var activatedMenu = false;
+menuTrigger.addEventListener('click', function() {
+    if(!activatedMenu) {
+        menu.style.right = "1rem";
+        activatedMenu = !activatedMenu;
+        menuIcon.src = "./assets/img/icon/icon-close.svg";
+    } else {
+        menu.style.right = "-70vw";
+        activatedMenu = !activatedMenu;
+        menuIcon.src = "./assets/img/icon/icon-burguer.svg";
+    }
+})
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                    <div class="card__info">
+                        <h2 class="card__info-title">Sistema de controle do menu</h2>
+                        <p class="card__info-description">Aqui se encontra o sistema que controla o menu  do site no modo mobile.</p>
+                        <span class="card__info-tag card__info-tag--javascript">Javascript</span>
+                        <div class="card__info-interactions">
+                            <div class="card__interaction-container">
+                                <div class="card__comments">
+                                    <img src="./assets/img/icon/icon-comment.svg" alt="" class="card__comments-icon">
+                                    <span class="card__comments-num">0</span>
+                                </div>
+                                <div class="card__likes">
+                                    <img src="./assets/img/icon/icon-heart.svg" alt="" class="card__likes-icon">
+                                    <span class="card__likes-num">0</span>
+                                </div>
+                            </div>
+                            <div class="card__profile">
+                                <img src="./assets/img/user-lucas.jpg" alt="" class="card__profile-image">
+                                <p class="card__profile-username">@palhano_o</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </section>
+
+    </main>
+
+    <script src="./assets/js/database.js"></script>
+    <script src="./assets/js/menu.js"></script>
+    <script src="./assets/js/cards.js"></script>
+    <script src="./assets/js/search-n-flter.js"></script>
+    <script src="./assets/highlight/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+
+</body>
+</html>

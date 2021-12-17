@@ -1,0 +1,226 @@
+// sass --watch app/src/assets/sass/comunidade.scss:app/src/assets/css/comunidade.css
+
+@import 'normalize';
+
+@import 'common';
+
+@import 'header';
+
+@import 'menu';
+
+.projects {
+
+    @include desktop {
+        width: 77vw;
+    }
+
+    &__filter {
+        display: none;
+        margin: 0 0 3rem;
+        cursor: pointer;
+        padding: 1rem;
+        border-radius: $border-radius;
+        background-color: rgba($white,0.24);
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        font-weight: 400;
+    }
+    &__search {
+        display: none;
+        margin: 0 0 3rem;
+        cursor: pointer;
+        padding: 1rem;
+        border-radius: $border-radius;
+        background-color: rgba($white,0.24);
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        font-weight: 400;
+    }
+
+    &__list {
+        display: grid;
+        list-style: none;
+        gap: 2rem;
+        grid-template-columns: 100%;
+        padding-left: 0;
+
+        @include desktop {
+            grid-template-columns: 48.5% 48.5%;
+        }
+    }
+
+    .card {
+        background-color: rgba(0,0,0,0.16);
+        border-radius: $border-radius;
+        display: block;
+
+        &__link {
+            text-decoration: none;
+            color: $white;
+        }
+
+        &__container {
+            background-color: $editor-background;
+            border-radius: 8px;
+            padding: 1rem;
+
+            &--one {
+                background-color: #D37E7E;
+            }
+            
+            &--two {
+                background-color: #8CBACF;
+                
+            }
+            
+            &--three {
+                background-color: #5EA16C;
+                
+            }
+            
+            &--four {
+                background-color: #E2EE87;
+
+            }
+        }
+
+        &__console {
+            background-color: $dark-gray;
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 16px 24px rgba(0,0,0,0.24);
+
+            &-header {
+                background-image: url('../../assets/img/icon/icon-mac_buttons.svg');
+                background-repeat: no-repeat;
+                height: 1rem;
+                margin-bottom: .5rem;
+            }
+
+        }
+
+        &__code {
+            color: $white;
+            width: 100%;
+            height: 15rem;
+            display: block;
+            margin: auto;
+            background-color: $dark-gray;
+            border: none;
+            box-sizing: border-box;
+            resize: none;
+            font-family: 'Roboto Mono', monospace;
+            outline: none;
+            
+            &-hightlight {
+                // O background precisou ser mudado diretamente no hightlight.js
+                scrollbar-color: lighten($dark-gray, 40%) transparent;
+                scrollbar-width: thin;
+                overflow-x: scroll;
+                overflow-y: scroll;
+                margin: -1.5rem 0;
+                padding: 0;
+                max-height: 15.5rem;
+                
+                &::-webkit-scrollbar {
+                    width: 1rem;
+                }
+        
+                &::-webkit-scrollbar-track {
+                    background-color: transparent;
+                }
+        
+                &::-webkit-scrollbar-thumb {
+                    background-color: lighten($dark-gray, 40%);
+                    border-radius: $border-radius;
+                }
+            }
+        }
+
+        &__info {
+            padding: 1.5rem 2rem 1rem;
+            
+            &-title {
+                font-size: 1.2rem;
+                font-weight: 600;
+                margin: 0;
+            }
+
+            &-tag {
+                padding: .5rem;
+                border-radius: 5px;
+                margin-top: 1rem;
+                display: block;
+                width: 80px;
+                text-align: center;
+                font-size: .9rem;
+                cursor: pointer;
+
+                &--javascript {
+                    background-color: rgba(#9daa3c, 0.7);
+                }
+
+                &--sass {
+                    background-color: rgba(#941c6c, 0.7);
+                }
+
+                &--python {
+                    background-color: rgba(#2e1c94, 0.7);
+                }
+            }
+    
+            &-description {
+                margin-top: 1rem;
+                line-height: 1.5rem;
+                margin-bottom: .5rem;
+            }
+
+            &-interactions {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+
+        &__interaction-container {
+            display: flex;
+            align-items: center;
+        }
+
+        &__comments {
+            display: flex;
+            align-items: center;
+            margin-right: 1.5rem;
+            cursor: pointer;
+
+            &-icon {
+                margin-right: .5rem;
+            }
+        }
+
+        &__likes {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            &-icon {
+                margin-right: .5rem;
+            }
+        }
+        
+        &__profile {
+            display: flex;
+            align-items: center;
+
+            &-image {
+                width: 2.2rem;
+                height: 2.2rem;
+                border-radius: 50%;
+                margin-right: 1rem;
+            }
+        }
+    }
+}

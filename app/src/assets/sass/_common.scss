@@ -1,0 +1,15 @@
+.main-content {
+    padding: 1.5rem 1rem;
+    margin-bottom: 1rem;
+
+    @include tablet {
+        padding: 1.5rem 2rem;
+        margin-bottom: 2rem;
+    }
+
+    @include desktop {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+}
