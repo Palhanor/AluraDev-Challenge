@@ -380,7 +380,7 @@ template {
 }
 @media (min-width: 1440px) {
   .header__logo {
-    width: 18vw;
+    width: 15vw;
     margin-right: 0;
   }
 }
@@ -614,6 +614,30 @@ template {
   background-color: #8787a4;
   border-radius: 8px;
 }
+.code-editor__highlight {
+  margin: 0;
+  padding: 0;
+  height: 20rem;
+}
+.code-editor__highlight-code {
+  height: 20rem;
+  margin-top: -1rem;
+  padding: 0 !important;
+  scrollbar-color: #8787a4 #3f3f53;
+  scrollbar-width: thin;
+}
+.code-editor__highlight-code::-webkit-scrollbar {
+  width: 1rem;
+  /*Gives you width to the scrollbar*/
+}
+.code-editor__highlight-code::-webkit-scrollbar-track {
+  background-color: #3f3f53;
+  border-radius: 8px;
+}
+.code-editor__highlight-code::-webkit-scrollbar-thumb {
+  background-color: #8787a4;
+  border-radius: 8px;
+}
 .code-editor__submit {
   background-color: rgba(80, 129, 251, 0.08);
   width: 100%;
@@ -623,12 +647,21 @@ template {
   margin-top: 1rem;
   color: inherit;
   font-family: inherit;
+  border: 4px solid transparent;
 }
 @media (min-width: 1440px) {
   .code-editor__submit {
     margin-top: 1.5rem;
     padding: 1.2rem;
+    cursor: pointer;
   }
+}
+.code-editor__submit:hover {
+  background-color: rgba(80, 129, 251, 0.16);
+  border: 4px solid transparent;
+}
+.code-editor__submit:active {
+  border: 4px solid rgba(80, 129, 251, 0.24);
 }
 
 .project-form {
@@ -790,6 +823,19 @@ template {
   width: 100%;
   padding: 1rem;
   margin-top: 2rem;
+  border: 4px solid #5081FB;
+}
+@media (min-width: 1440px) {
+  .project-form__submit {
+    cursor: pointer;
+  }
+}
+.project-form__submit:hover {
+  background-color: #7BA4FC;
+  border: 4px solid #7BA4FC;
+}
+.project-form__submit:active {
+  border: 4px solid rgba(80, 129, 251, 0.72);
 }
 
 /*# sourceMappingURL=index.css.map */

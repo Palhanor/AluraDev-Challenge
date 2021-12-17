@@ -380,7 +380,7 @@ template {
 }
 @media (min-width: 1440px) {
   .header__logo {
-    width: 18vw;
+    width: 15vw;
     margin-right: 0;
   }
 }
@@ -650,7 +650,7 @@ template {
   font-family: "Roboto Mono", monospace;
   outline: none;
 }
-.projects .card__code-hightlight {
+.projects .card__code-highlight {
   scrollbar-color: #8787a4 transparent;
   scrollbar-width: thin;
   overflow-x: scroll;
@@ -659,13 +659,13 @@ template {
   padding: 0;
   max-height: 15.5rem;
 }
-.projects .card__code-hightlight::-webkit-scrollbar {
+.projects .card__code-highlight::-webkit-scrollbar {
   width: 1rem;
 }
-.projects .card__code-hightlight::-webkit-scrollbar-track {
+.projects .card__code-highlight::-webkit-scrollbar-track {
   background-color: transparent;
 }
-.projects .card__code-hightlight::-webkit-scrollbar-thumb {
+.projects .card__code-highlight::-webkit-scrollbar-thumb {
   background-color: #8787a4;
   border-radius: 8px;
 }
@@ -690,10 +690,10 @@ template {
 .projects .card__info-tag--javascript {
   background-color: rgba(157, 170, 60, 0.7);
 }
-.projects .card__info-tag--sass {
+.projects .card__info-tag--scss {
   background-color: rgba(148, 28, 108, 0.7);
 }
-.projects .card__info-tag--python {
+.projects .card__info-tag--php {
   background-color: rgba(46, 28, 148, 0.7);
 }
 .projects .card__info-description {

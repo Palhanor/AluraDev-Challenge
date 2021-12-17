@@ -114,8 +114,8 @@
             font-family: 'Roboto Mono', monospace;
             outline: none;
             
-            &-hightlight {
-                // O background precisou ser mudado diretamente no hightlight.js
+            &-highlight {
+                // O background precisou ser mudado diretamente no highlight.js
                 scrollbar-color: lighten($dark-gray, 40%) transparent;
                 scrollbar-width: thin;
                 overflow-x: scroll;
@@ -162,11 +162,11 @@
                     background-color: rgba(#9daa3c, 0.7);
                 }
 
-                &--sass {
+                &--scss {
                     background-color: rgba(#941c6c, 0.7);
                 }
 
-                &--python {
+                &--php {
                     background-color: rgba(#2e1c94, 0.7);
                 }
             }
